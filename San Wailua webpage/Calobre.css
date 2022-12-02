@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(Imagenes/Calobre.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: #fff;
+}
+
+.nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    transition: all 0.5s ease;
+
+}
+
+.nav.active {
+    background: #fff;
+    padding: 1px;
+}
+
+.nav.active .menu a{
+         color: #000;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    list-style: none;
+    margin: 10px;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.5s ease;
+
+}
+
+.menu li a:hover {
+    padding: 5px 10px;
+    background: #Daf7a6;
+    color: #000;
+    border-radius: 15px;
+}
+
+.scrol {
+    height: 100%;
+}
+
+.a {
+    align-items: center;
+    margin-top: 20%;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25%;
+}
+
+.btn-1 {
+   color: aliceblue;
+   text-decoration: none;
+   padding: 20px 50px;
+   font-size: 1.5rem;
+   position: relative;
+   margin: 32px;
+   margin-top: 20px;
+   
+
+}
+
+.btn-1::after, .btn-1::before {
+    border: 3px solid  aliceblue;
+    content: " ";
+    position: absolute;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    left: 0;
+    bottom: 0;
+    transition: transform 0.3s ease;
+}
+
+.btn-1:hover::after{
+    transform: translate(-5px, -5px);
+
+}
+
+.btn-1:hover::before{
+    transform: translate(5px, 5px);
+
+
+}
+
+.buttoms {
+   display: flex;
+}
+
+
+.container-accordion {
+    width: 90%;
+}
+
+.container-accordion h2 {
+    color: #506630;
+    padding: .7rem 0;
+    border-bottom: thin #bdc1c6 solid ;
+    font-weight: 100;
+    font-size: 1.4rem;
+}
+
+.sub-titles {
+    color: black;
+    border-bottom: thin #bdc1c6 solid ;
+}
+
+.sub-titles img {
+    transition: all .4s ease-in-out;
+}
+.sub-titles.active img {
+    transform: rotate(180deg);
+}
+.sub-titles h3 {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .7rem 0;
+    font-weight: 100;
+    cursor: pointer;
+    color: #506630;
+}
+
+.sub-titles .desplegar {
+    transition: all .3s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+}
+.sub-titles.active .desplegar {
+    max-height: none;
+    overflow: none;
+    padding: .7rem 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
